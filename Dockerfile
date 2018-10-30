@@ -15,6 +15,8 @@ RUN bash install_nvm.sh
 RUN chmod +x $HOME/.nvm/nvm.sh
 RUN $HOME/.nvm/nvm.sh install 8.11.1
 RUN apk --no-cache add nodejs-npm
+# upgrade npm
+RUN npm install -g npm@latest
 # show nodejs version
 RUN node -v
 # show npm version
