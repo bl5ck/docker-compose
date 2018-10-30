@@ -1,5 +1,5 @@
 # base image
-FROM node:8.12
+FROM ubuntu:18.04
 RUN apt-get update
 RUN apt-get install -y apt-transport-https
 RUN apt-get install -y ca-certificates
@@ -15,4 +15,12 @@ RUN curl -L "https://github.com/docker/compose/releases/download/1.22.0/docker-c
 RUN chmod +x /usr/local/bin/docker-compose
 # show docker-compose version
 RUN docker-compose --version
-# trigger rebuild
+# install node
+RUN curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh -o install_nvm.sh
+RUN bash install_nvm.sh
+RUN nvm install 8.11.1
+RUN apt-get install npm
+# show nodejs version
+RUN node -v
+# show npm version
+RUN npm -v
