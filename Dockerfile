@@ -12,7 +12,8 @@ RUN apk --no-cache add bash
 RUN apk --no-cache add curl  
 RUN curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh -o install_nvm.sh
 RUN bash install_nvm.sh
-RUN nvm install 8.11.1
+RUN chmod +x $HOME/.nvm/nvm.sh
+RUN $HOME/.nvm/nvm.sh install 8.11.1
 RUN apk --no-cache add nodejs-npm
 # show nodejs version
 RUN node -v
