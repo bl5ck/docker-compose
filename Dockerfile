@@ -15,3 +15,4 @@ RUN curl -L "https://github.com/docker/compose/releases/download/1.22.0/docker-c
 RUN chmod +x /usr/local/bin/docker-compose
 # show docker-compose version
 RUN docker-compose --version
+# trigger rebuild
