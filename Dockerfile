@@ -1,5 +1,5 @@
 # base image
-FROM ubuntu:18.04
+FROM node:8.12
 RUN apt-get update
 RUN apt-get install -y apt-transport-https
 RUN apt-get install -y ca-certificates
