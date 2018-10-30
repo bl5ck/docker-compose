@@ -18,8 +18,8 @@ RUN docker-compose --version
 # install node
 RUN curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh -o install_nvm.sh
 RUN bash install_nvm.sh
-RUN export NVM_DIR="$HOME/.nvm" [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 
-RUN nvm install 8.11.1
+RUN chmod +x $HOME/.nvm/nvm.sh
+RUN $HOME/.nvm/nvm.sh install 8.11.1
 RUN apt-get install npm
 # show nodejs version
 RUN node -v
