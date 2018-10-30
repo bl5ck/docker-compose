@@ -20,7 +20,9 @@ RUN curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.s
 RUN bash install_nvm.sh
 RUN chmod +x $HOME/.nvm/nvm.sh
 RUN $HOME/.nvm/nvm.sh install 8.11.1
-RUN apt-get install npm
+RUN apt-get install -y npm
+# upgrade npm
+RUN npm install -g npm@latest
 # show nodejs version
 RUN node -v
 # show npm version
