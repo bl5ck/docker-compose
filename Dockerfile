@@ -5,6 +5,7 @@ RUN apt-get install -y apt-transport-https
 RUN apt-get install -y ca-certificates
 RUN apt-get install -y curl
 RUN apt-get install -y software-properties-common
+RUN apt-get install -y jq
 RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
 RUN apt-key fingerprint 0EBFCD88
 RUN add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
