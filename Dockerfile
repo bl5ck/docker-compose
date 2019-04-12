@@ -2,8 +2,9 @@
 FROM alpine:3.8
 RUN apk update
 RUN apk --no-cache add docker
+RUN apk --no-cache add jq
 # install docker-compose
-RUN apk --no-cache  add py-pip
+RUN apk --no-cache add py-pip
 RUN pip install docker-compose
 # show docker-compose version
 RUN docker-compose --version
