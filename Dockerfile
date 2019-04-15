@@ -5,7 +5,7 @@ RUN apk --no-cache add docker
 RUN apk --no-cache add jq
 # install docker-compose
 RUN apk --no-cache add py-pip
-RUN pip install docker-compose
+RUN pip install docker-compose --force --upgrade
 # show docker-compose version
 RUN docker-compose --version
 # install node
