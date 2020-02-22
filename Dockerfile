@@ -1,7 +1,7 @@
 # base image
 FROM alpine:3.8
 RUN apk update
-RUN apk --no-cache add docker
+RUN apk --no-cache add docker@19.03.0
 RUN apk --no-cache add jq
 # install docker-compose
 RUN apk --no-cache add py-pip
