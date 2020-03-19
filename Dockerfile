@@ -5,6 +5,7 @@ RUN apk --no-cache add docker=19.03.5-r0
 RUN apk --no-cache add jq
 # install docker-compose
 RUN apk --no-cache add py-pip
+RUN apk --no-cache add openssh
 RUN pip install --upgrade pip
 RUN apk add python-dev libffi-dev openssl-dev gcc libc-dev make
 RUN pip install docker-compose --force --upgrade
